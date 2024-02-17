@@ -1,34 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import  Header from './components/Header';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Categoryscreen from './components/Category'; // Define these screen components
+import ContactScreen from './components/Contact';
+import GREscreen from './components/GRE';
+import Header from './components/Header';
+import QAscreen from './components/QA';
+import ResourceScreen from './components/Resources';
+import HomeScreen from './components/Home';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Header></Header>
-      <View style={styles.container2}>
-        <Text>EasyTextbook</Text>
-        <StatusBar style="auto" />
-      </View>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{
+        header: ({ navigation, route, options }) => {
+          return (
+            <Header navigation={navigation} route={route} />
+          );
+        },
+      }}>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Category" component={Categoryscreen} />
+        <Stack.Screen name="Contact" component={ContactScreen} />
+        <Stack.Screen name="GRE" component={GREscreen} />
+        <Stack.Screen name="Resources" component={ResourceScreen} />
+        <Stack.Screen name="QA" component={QAscreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  topContainer: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+

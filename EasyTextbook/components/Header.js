@@ -1,42 +1,28 @@
 import React from 'react';
+import { View, Button, StyleSheet } from 'react-native';
 
-const Header = () => {
-  // Example click handler function
-  const handleButtonClick = (buttonName) => {
-    alert(`${buttonName} button clicked!`);
-  };
-
-  // Inline styles for the header and buttons
-  const headerStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    color: '#111111',
-    padding: '10px 20px',
-  };
-
-  const buttonStyle = {
-    padding: '10px 20px',
-    cursor: 'pointer',
-    border: 'none',
-    borderRadius: '5px',
-    margin: '0 10px',
-    backgroundColor: '#007bff',
-    color: 'white',
-  };
-
+const Header = ({ navigation }) => {
   return (
-    <div style={headerStyle}>
-      <h1>EasyTextbook</h1>
-      <div>
-        <button style={buttonStyle} onClick={() => handleButtonClick('Home')}>Home</button>
-        <button style={buttonStyle} onClick={() => handleButtonClick('Resources')}>Resources</button>
-        <button style={buttonStyle} onClick={() => handleButtonClick('QA')}>Q&A</button>
-
-      </div>
-    </div>
+    <View style={styles.container}>
+      <Button title="Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Category" onPress={() => navigation.navigate('Category')} />
+      <Button title="Contact" onPress={() => navigation.navigate('Contact')} />
+      <Button title="GRE" onPress={() => navigation.navigate('GRE')} />
+      <Button title="Resources" onPress={() => navigation.navigate('Resources')} />
+      <Button title="QA" onPress={() => navigation.navigate('QA')} />
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    height: 60, // Adjust based on your needs
+    width: '100%',
+    backgroundColor: '#eee', // Your preferred header background color
+  },
+});
 
 export default Header;
