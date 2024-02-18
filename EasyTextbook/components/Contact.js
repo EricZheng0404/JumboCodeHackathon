@@ -52,7 +52,6 @@ function UserForm() {
 
     querySnapshot.forEach((doc) => {
       match_array.push(doc.data());
-      console.log(doc.id, " => ", doc.data());
     });
 
     setResults({...results, matches: match_array});

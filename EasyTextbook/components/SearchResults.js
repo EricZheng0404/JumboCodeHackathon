@@ -12,7 +12,7 @@ const SearchResults = ({ results }) => {
         If you would like to be able to be discovered by other students, click the "Submit" button.
     </Text>);
   }
-  console.log(results);
+  
   return (
     <table>
         <thead>
