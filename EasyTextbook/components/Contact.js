@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc } from 'firebase/firestore/lite';
+import SearchResults from '../components/SearchResults';
+import { getFirestore, collection, addDoc, query, where, getDocs } from 'firebase/firestore/lite';
 import FindInfoContainer from './FindInfo'; // Ensure this path is correct
 
 // Your web app's Firebase configuration
@@ -21,21 +22,47 @@ const db = getFirestore(app);
 
 function UserForm() {
 
+  const initialFormData = {
+    fname: '',
+    email: '',
+    number: '',
+    test: ''
+  };
+
   const [formData, setFormData] = useState({
     fname: '',
     email: '',
     number: '',
-    test: '',
+    test: ''
   });
 
-  const search = (e) => {
+  const [results, setResults] = useState({
+    matches: null
+  });
+
+  const startSearch = (e) => {
     e.preventDefault();
+    const q = query(collection(db, "users"), where("test", "==", formData.test));
+    search(q);
+  }
+
+  async function search(q) {
+    const querySnapshot = await getDocs(q);
+    const match_array = [];
+
+    querySnapshot.forEach((doc) => {
+      match_array.push(doc.data());
+      console.log(doc.id, " => ", doc.data());
+    });
+
+    setResults({...results, matches: match_array});
   }
 
   const addUser = (e) => {
     e.preventDefault();
     const newId = createUser();
     console.log("Added new user to db: ", {newId});
+    setFormData(initialFormData);
   }
 
   async function createUser() {
@@ -89,8 +116,11 @@ function UserForm() {
                 <option value="gre">GRE</option>
             </select><br/>
             <input type="submit" value="Submit" onClick={addUser}></input>
-            <input type="submit" value="Search for a TestBuddy!" onClick={search}></input>
+            <input type="submit" value="Search for a TestBuddy!" onClick={startSearch}></input>
         </form>
+      </div>
+      <div>
+        <SearchResults results={results.matches} />
       </div>
     </View>
   );
