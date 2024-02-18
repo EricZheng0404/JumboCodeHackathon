@@ -5,14 +5,13 @@ const QAscreen = () => {
   const [email, setEmail] = useState('');
   const [question, setQuestion] = useState('');
 
-  // Function to handle form submission
   const handleSubmit = async () => {
     try {
       const formBody = new URLSearchParams({
         email: email,
         question: question,
       }).toString();
-
+  
       const response = await fetch('https://script.google.com/macros/s/AKfycbwHXMZnOrfhUJ-jyojnnj9QuyskOBinJEMV5iX5UvGuppnE9j_ZaeCOdf2HkAvcyv1LBA/exec', {
         method: 'POST',
         headers: {
@@ -20,19 +19,25 @@ const QAscreen = () => {
         },
         body: formBody,
       });
-
+  
       if (!response.ok) throw new Error('Network response was not ok.');
-
-      const data = await response.json(); // or response.text() if the server returns plain text
-      Alert.alert('Success', 'Your question has been submitted successfully!');
-      // Optionally reset the form fields
+  
+      // Assuming the server responds with JSON. Adjust if necessary.
+      const data = await response.json();
+  
+      // Use window.alert for web environment
+      window.alert('Your question has been submitted successfully!');
+  
+      // Clear the form fields
       setEmail('');
       setQuestion('');
     } catch (error) {
       console.error('Error:', error);
-      Alert.alert('Error', 'There was a problem with your submission. Please try again.');
+      // Use window.alert for error handling in web environment
+      window.alert('There was a problem with your submission. Please try again.');
     }
   };
+  
 
   // Placeholder for accordion items state (you might want to fetch this data or define it elsewhere)
   const [accordionItems, setAccordionItems] = useState([
