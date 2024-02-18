@@ -42,7 +42,9 @@ function UserForm() {
 
   const startSearch = (e) => {
     e.preventDefault();
-    const q = query(collection(db, "users"), where("test", "==", formData.test));
+    const q = query(collection(db, "users"),
+                    where("test", "==", formData.test),
+                    where("email", "!=", formData.email));
     search(q);
   }
 
@@ -52,7 +54,6 @@ function UserForm() {
 
     querySnapshot.forEach((doc) => {
       match_array.push(doc.data());
-      console.log(doc.id, " => ", doc.data());
     });
 
     setResults({...results, matches: match_array});
