@@ -42,7 +42,9 @@ function UserForm() {
 
   const startSearch = (e) => {
     e.preventDefault();
-    const q = query(collection(db, "users"), where("test", "==", formData.test));
+    const q = query(collection(db, "users"),
+                    where("test", "==", formData.test),
+                    where("email", "!=", formData.email));
     search(q);
   }
 
