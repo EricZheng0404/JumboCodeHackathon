@@ -6,7 +6,7 @@ const Header = ({ title, navigation }) => {
     <View style={styles.container}>
       <Text style={styles.headerTitle}>{title}</Text>
       <Button title="Home" onPress={() => navigation.navigate('Home')} />
-      <Button title="Category" onPress={() => navigation.navigate('Category')} />
+      <Button title="Sections" onPress={() => navigation.navigate('Category')} />
       <Button title="Find a buddy" onPress={() => navigation.navigate('Contact')} />
       <Button title="Flashcards" onPress={() => navigation.navigate('Flashcards')} />
       <Button title="Resources" onPress={() => navigation.navigate('Resources')} />
