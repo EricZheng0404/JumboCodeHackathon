@@ -7,7 +7,7 @@ const Header = ({ title, navigation }) => {
       <Text style={styles.headerTitle}>{title}</Text>
       <Button title="Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Category" onPress={() => navigation.navigate('Category')} />
-      <Button title="Contact" onPress={() => navigation.navigate('Contact')} />
+      <Button title="Find a buddy" onPress={() => navigation.navigate('Contact')} />
       <Button title="Flashcards" onPress={() => navigation.navigate('Flashcards')} />
       <Button title="Resources" onPress={() => navigation.navigate('Resources')} />
       <Button title="Q&A" onPress={() => navigation.navigate('QA')} />
