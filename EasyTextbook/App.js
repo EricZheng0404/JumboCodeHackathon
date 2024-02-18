@@ -8,8 +8,23 @@ import Header from './components/Header';
 import QAscreen from './components/QA';
 import ResourceScreen from './components/Resources';
 import HomeScreen from './components/Home';
+import { initializeApp } from "firebase/app";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyA2bUiboJDhbpHn5J3kiUXnI_G7avXrjqA",
+  authDomain: "tuftshackathondb.firebaseapp.com",
+  projectId: "tuftshackathondb",
+  storageBucket: "tuftshackathondb.appspot.com",
+  messagingSenderId: "885169630160",
+  appId: "1:885169630160:web:97af9c7c36ad31a17227d5"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 const Stack = createStackNavigator();
+
 
 function App() {
   return (
