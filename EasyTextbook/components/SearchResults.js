@@ -7,9 +7,9 @@ const SearchResults = ({ results }) => {
   if (results == null) {
     return;
   }  else if (results.length == 0) {
-    return <Text>Our apologies, we are unable to find any matches at the moment. 
+    return (<Text>Our apologies, we are unable to find any matches at the moment. 
         If you would like to be able to be discovered by other students, click the "Submit" button.
-    </Text>;
+    </Text>);
   }
   console.log(results);
   return (
