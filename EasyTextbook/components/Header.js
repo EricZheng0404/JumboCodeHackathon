@@ -1,15 +1,16 @@
 import React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, Button, StyleSheet , Text} from 'react-native';
 
-const Header = ({ navigation }) => {
+const Header = ({ title, navigation }) => {
   return (
     <View style={styles.container}>
+      <Text style={styles.headerTitle}>{title}</Text>
       <Button title="Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Category" onPress={() => navigation.navigate('Category')} />
       <Button title="Contact" onPress={() => navigation.navigate('Contact')} />
       <Button title="GRE" onPress={() => navigation.navigate('GRE')} />
       <Button title="Resources" onPress={() => navigation.navigate('Resources')} />
-      <Button title="QA" onPress={() => navigation.navigate('QA')} />
+      <Button title="Q&A" onPress={() => navigation.navigate('QA')} />
     </View>
   );
 };
@@ -22,6 +23,10 @@ const styles = StyleSheet.create({
     height: 60, // Adjust based on your needs
     width: '100%',
     backgroundColor: '#eee', // Your preferred header background color
+  },
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 });
 
