@@ -9,6 +9,7 @@ import QAscreen from './components/QA';
 import ResourceScreen from './components/Resources';
 import HomeScreen from './components/Home';
 import { initializeApp } from "firebase/app";
+import { View, TextInput, Text, StyleSheet } from 'react-native';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -32,7 +33,7 @@ function App() {
       <Stack.Navigator screenOptions={{
         header: ({ navigation, route, options }) => {
           return (
-            <Header navigation={navigation} route={route} />
+            <Header title={"TestBuddy"} navigation={navigation} route={route} />
           );
         },
       }}>
@@ -46,6 +47,15 @@ function App() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontWeight: 'bold',
+    fontSize: 18, // Adjust size as needed
+  },
+});
+
+
 
 export default App;
 
