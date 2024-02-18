@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Q&A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Commonly Asked Question</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div class="accordion accordion-flush" style="max-width: 1200px; width: 1000px" id="accordionFlushExample";>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                How Important Are SAT Scores?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" style="max-width: 1200px;" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">The weight placed on SAT scores varies from school to school. Colleges and universities also consider high school grade point average and academic transcript, letters of recommendation, interviews, and personal essays when deciding on admissions. In addition, virtually all U.S. colleges and universities will accept ACT scores in lieu of SAT scores. For more specific information about the weight of your scores, contact the admissions offices of the schools to which you will apply.</div>
+          </div>
+        </div>
+        <div class="accordion-item" style="max-width: 1200px;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                When Should I Start Prepping?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" style="max-width: 1200px;" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Give yourself 5 to 12 weeks to  prepare for the SAT . If you prep with us during the summer, we'll give you a  free full–length practice test  and wrap–up course session right before your test in the fall. Learn about our  SAT prep courses . And if you're confused about when to take the SAT, we can help. Learn more about  SAT dates .</div>
+          </div>
+        </div>
+        <div class="accordion-item" style="max-width: 1200px;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                How Do I Register for the SAT?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" style="max-width: 1200px;" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body" style="max-width: 1200px;">SAT registration deadlines fall approximately 5 weeks before each test date. To register by mail, fill out the registration form in the College Board's Bulletin for the SAT Program. You can get a free copy of this publication from your school counselor. Or you can call ETS at 609–771–7600 and they'll send you one free of charge. You can also register online at www.collegeboard.com.</div>
+          </div>
+        </div>
+      </div>
+      <h1>Ask Us a Question</h1>
+      <form id="myForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="question">Question:</label>
+        <textarea id="question" name="question" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            var formData = new FormData(this); // Create a FormData object, passing in the form
+        
+            // Replace YOUR_APPS_SCRIPT_WEB_APP_URL with your actual web app URL
+            fetch('https://script.google.com/macros/s/AKfycbwHXMZnOrfhUJ-jyojnnj9QuyskOBinJEMV5iX5UvGuppnE9j_ZaeCOdf2HkAvcyv1LBA/exec', {
+                method: 'POST',
+                body: formData,
+                // Additional headers may be required depending on your backend setup
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json(); // or response.text() if the server returns plain text
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+                // Handle success
+                alert('Your question has been submitted successfully!');
+                // Optionally reset the form or perform other actions on success
+                document.getElementById('myForm').reset();
+            })
+            .catch(error => {
+                // Handle errors if the request failed
+                console.error('Error:', error);
+                alert('There was a problem with your submission. Please try again.');
+            });
+        });
+        </script>
+            
+  </body>
+</html>
