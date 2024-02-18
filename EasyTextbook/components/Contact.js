@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from 'firebase/firestore/lite';
+import FindInfoContainer from './FindInfo'; // Ensure this path is correct
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -53,7 +54,8 @@ function UserForm() {
   }
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'top' }}>
+      <FindInfoContainer></FindInfoContainer>
       <Text>Contact Screen</Text>
       <div>
         <form id="partnerForm">
