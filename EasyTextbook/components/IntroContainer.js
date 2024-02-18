@@ -5,7 +5,7 @@ const IntroContainer = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        Welcome to TestBuddy, your comprehensive gateway to mastering standardized tests with ease and confidence. At easyTextbook, we understand the challenges and pressures that come with preparing for standardized tests. That's why we've created a platform that not only simplifies your study process but also enhances it by providing a wealth of resources tailored to your needs.
+        Welcome to TestBuddy, your comprehensive gateway to mastering standardized tests with ease and confidence. At TestBuddy, we understand the challenges and pressures that come with preparing for standardized tests. That's why we've created a platform that not only simplifies your study process but also enhances it by providing a wealth of resources tailored to your needs.
         {'\n\n'}
         Our platform offers an extensive collection of textbooks spanning various subjects and test types, ensuring you have the right material at your fingertips. But easyTextbook is more than just a resource library; it's a community. Connect with study partners who share your goals and challenges, making your preparation journey less daunting and more collaborative.
         {'\n\n'}

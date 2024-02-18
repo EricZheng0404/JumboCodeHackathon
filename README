@@ -1,0 +1,93 @@
+
+/************************************************************************************  
+*  
+*     Program:    TestBuddy
+*     Authors:    Alexander Chanis
+*                 Eric Zheng
+*                 Chloe Xie
+*                 Mark Martirosian
+*                 Youssef Naguib
+*     Date:       2/17/2024 - 2/18/2024
+*     Website:    https://65d263d58f9c518e078e6865--testbuddyjumbocode.netlify.app/
+*     Summary:    TestBuddy is a non-profit organization dedicated to assisting 
+*                 students with standardized testing. We offer a wealth of free 
+*                 resources that were previously inaccessible to many due to 
+*                 financial constraints. Our mission is to foster a supportive 
+*                 community where students can easily find peers—test buddies—to 
+*                 collaborate with, making test preparation less daunting 
+*                 and more accessible for everyone.
+*
+***********************************************************************************/
+
+
+/************************************************************************************
+*                            Acknowledgement
+***********************************************************************************/
+Thank you to Tufts University and JumboCode for hosting this event. It presented us 
+with a unique opportunity to contribute positively to society and education. 
+Despite having just two days, we successfully created a prototype of the website. 
+The JumboCode staff offered invaluable inspiration and technical guidance. 
+We thoroughly enjoyed dedicating time to coding projects of our own interest, 
+beyond the usual scope of homework and assignments.
+
+
+/************************************************************************************
+*                            Description
+***********************************************************************************/
+Given the resurgence in SAT participation to near pre-pandemic levels, as reported by 
+Education Week, it's evident that standardized tests like the SAT continue to play 
+a pivotal role in college admissions. This trend underscores the importance of 
+platforms like TestBuddy, which aims to democratize access to test preparation 
+resources. Despite some institutions adopting test-optional policies, the SAT 
+remains integral to the college application process for many students.
+
+The growing number of test-takers, coupled with the persistent achievement gap 
+influenced by socioeconomic factors, highlights the need for accessible educational 
+support. TestBuddy addresses this by offering free resources, leveling the playing 
+field for students from diverse backgrounds. As SAT scores still reflect disparities 
+in educational opportunity, initiatives us become essential in bridging 
+these gaps, providing all students with the tools needed to excel.
+
+
+/************************************************************************************
+*                            Functions
+***********************************************************************************/
+1. Categories
+(TO BE UPDATED)
+
+2. Find A Buddy
+This page is your gateway to not just ace your standardized exams but also to find 
+the perfect study buddy! Whether you're diving into SAT/ACT prep or tackling 
+challenging the GRE, this platform is designed with you in mind. By simply navigating 
+section, you can easily input your study habits, subjects you're focusing on, and 
+when you're free to hit the books. You can sift through the database and connect 
+with peers who share your academic interests and goals. It's a fantastic way to 
+make studying more interactive and fun, while also building a community of fellow 
+students committed to academic excellence. Plus, with the added bonus of downloadable 
+materials at your fingertips, you're all set for success!
+
+3. Flashcards
+Our Flashcards page is designed to enhance your proficiency in tackling SAT, ACT, 
+and GRE questions. Each flashcard presents a sample question on one side and the 
+corresponding answer on the reverse, providing immediate feedback on your responses. 
+This feature enables a swift self-assessment every day, allowing you to gauge your 
+progress and reinforce your understanding of key concepts efficiently.
+
+4. Resources
+Our Resources page offers students an extensive collection of test preparation 
+materials to aid in their study journey. From insightful websites for in-depth 
+research to official sample tests provided by the College Board and valuable experience 
+sharing from peers, we've curated a diverse range of resources to support your test prep 
+needs. We are committed to regularly updating our materials, ensuring you have access to 
+the latest information and study aids. Whether you're seeking additional practice 
+questions or eager to learn helpful strategies from fellow students, this is your 
+go-to destination for enriching your test preparation experience.
+
+5. Q&A
+Do you have questions about the test? If so, you're not alone. Our Q&A page is here 
+to dispel any confusion by providing swift answers to some of the most frequently asked 
+questions about the test. This resource is designed to give you quick, reliable 
+insights into common queries and concerns. However, if your question isn't answered, 
+don't hesitate to leave us a message. We're committed to responding to your inquiries 
+4promptly, ensuring you receive the information you need without delay.
+

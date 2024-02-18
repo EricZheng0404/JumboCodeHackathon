@@ -82,7 +82,6 @@ function UserForm() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'top' }}>
       <FindInfoContainer></FindInfoContainer>
-      <Text>Contact Screen</Text>
       <div>
         <form id="partnerForm">
             <label htmlFor="fname">First name:</label><br/>
@@ -115,7 +114,7 @@ function UserForm() {
                 <option value="gre">GRE</option>
             </select><br/>
             <input type="submit" value="Submit" onClick={addUser}></input>
-            <input type="submit" value="Search for a TestBuddy!" onClick={startSearch}></input>
+            <input type="submit" value="Search for a TestBuddy" onClick={startSearch}></input>
         </form>
       </div>
       <div>
